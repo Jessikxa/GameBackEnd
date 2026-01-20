@@ -49,18 +49,18 @@ public class PickUpItem : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
-        {
+        //if (other.CompareTag("Player"))
+        //{
             isPickedUp = true;
             Debug.Log("Trigger entered by " + other.name);
-        }
+        //}
     }
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player"))
+        //if (other.CompareTag("Player"))
 
-        {
+        //{
             isPickedUp = false;
-        }
+        //}
     }
 }
