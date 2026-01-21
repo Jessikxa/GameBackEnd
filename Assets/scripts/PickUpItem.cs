@@ -20,6 +20,12 @@ public class PickUpItem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //spin object when not held
+        if (!isHolding)
+        {
+            transform.Rotate(Vector3.up * Time.deltaTime * 50f, Space.World); //or Space.Self
+        }
+
         if (Input.GetKeyDown(KeyCode.E) && isPickedUp)
         {
             if (!isHolding)
